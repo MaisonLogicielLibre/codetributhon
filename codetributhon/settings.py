@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 from django.core.urlresolvers import reverse_lazy
+from definitions import ROOT_DIR
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -115,20 +116,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LOCALE_PATHS = ( 
-    'codetributhon/locale', 
-    'events/locale', 
-    'projects/locale', 
-    'pages/locale', 
-    'faq/locale', 
-    'members/locale', 
+LOCALE_PATHS = (
+    'codetributhon/locale',
+    'events/locale',
+    'projects/locale',
+    'pages/locale',
+    'faq/locale',
+    'members/locale',
 )
 
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'fr-ca'
 
 # Do not import the real utils here! We don't want an infinite loop
 gettext = lambda x: x
