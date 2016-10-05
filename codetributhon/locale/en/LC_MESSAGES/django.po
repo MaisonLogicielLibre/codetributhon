@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-28 14:48+0000\n"
+"POT-Creation-Date: 2016-10-05 14:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,7 +68,7 @@ msgstr "Many workshops and conferences coming your way!"
 msgid "Liste des évènements"
 msgstr "Workshop's list"
 
-#: pages/templates/pages/home.html:107 pages/templates/pages/home.html:144
+#: pages/templates/pages/home.html:107
 msgid "Contributions cumulées"
 msgstr "Cumulated contributions"
 
@@ -86,11 +86,23 @@ msgstr "Contributhion's list"
 msgid "Envoyez votre contribution"
 msgstr "Send your contribution"
 
-#: pages/templates/pages/home.html:143
+#: pages/templates/pages/home.html:144
 msgid "C'est quoi le codetributhon?"
 msgstr "What is codetributhon?"
 
-#: pages/templates/pages/home.html:150 pages/templates/pages/home.html:161
+#: pages/templates/pages/home.html:150
+msgid "Le marathon"
+msgstr "The marathon"
+
+#: pages/templates/pages/home.html:152
+msgid ""
+"Un marathon de contributions étudiantes. Objectif 100 contributions dans 4 "
+"projets en logiciel libre."
+msgstr ""
+"A marathon of student's contributions. An objectif of 100 contibutions in 4 "
+"free software projects."
+
+#: pages/templates/pages/home.html:161
 msgid "Des activités"
 msgstr "Activities"
 
@@ -128,15 +140,10 @@ msgid ""
 msgstr ""
 "Activity during the semaine québécoise de l'informatique libre (SQIL) 2016"
 
-#~ msgid "Un marathon"
-#~ msgstr "A marathon"
+#: codetributhon/settings.py:138
+msgid "Français"
+msgstr "French"
 
-#~| msgid ""
-#~| "Un marathon de contributions étudiantes. Objectif 100 contributions dans "
-#~| "4 projets en logiciel libre"
-#~ msgid ""
-#~ "Le marathon de contributions étudiantes. Objectif 100 contributions dans "
-#~ "4 projets en logiciel libre"
-#~ msgstr ""
-#~ "The marathon of students contibutions. Golas 100 contibutions in 4 "
-#~ "projects in free software"
+#: codetributhon/settings.py:139
+msgid "Anglais"
+msgstr "English"
