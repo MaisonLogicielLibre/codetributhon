@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 from django.core.urlresolvers import reverse_lazy
-from definitions import ROOT_DIR
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -129,6 +128,7 @@ LOCALE_PATHS = (
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
+LANGUAGE_CODE = 'fr-ca'
 
 # Do not import the real utils here! We don't want an infinite loop
 gettext = lambda x: x
