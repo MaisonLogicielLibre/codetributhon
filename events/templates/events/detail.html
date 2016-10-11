@@ -126,35 +126,41 @@
             </div>
 
 
+
             <div class="row">
-
-                <ul class="list-inline">
-                <li>
-                <a href="{{ events.url }}" class="btn btn-md btn-url" style="background-color:#EFAD4F">
-                    <span class="fa fa-globe"></span>Inscris-toi
-                </a>
-                  </li>
-                  <li>
-                <button class="btn btn-md share_fb" data-url="{% url 'events:event_detail' events.id %}" style="background-color:#4C67A1">
-                  <i class="fa fa-facebook" aria-hideen="true"></i>
-                  Partager
-                </button>
-                  </li>
-                  <li>
-                <button class="btn btn-md share_tw" data-url="{% url 'events:event_detail' events.id %}"  style="background-color:#55ACEE">
-                  <i class="fa fa-twitter" aria-hideen="true"></i>
-                  Partager
-                </button>
-                  </li>
-                  <li>
-                <button class="btn btn-md share_lkdin" data-url="{% url 'events:event_detail' events.id %}" style="background-color:#0177B5">
-                  <i class="fa fa-linkedin" aria-hideen="true"></i>
-                  Partager
-                </button>
-                   </li>
-                </ul>
-
-            </div>
+                  {% autoescape off %}
+                      {{content_html}}
+                  {% endautoescape %}
+                  <div>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="{{ events.url }}" class="btn btn-md btn-url" style="background-color:#EFAD4F">
+                                <span class="fa fa-globe"></span>
+                                {% trans "Inscris-toi" %}
+                            </a>
+		                </li>
+                        {% trans "Partager" as Partager %}
+		                <li>
+                            <button class="btn btn-md share_fb" data-url="{{events.url}}{% url 'events:event_detail' events.id %}" style="background-color:#4C67A1">
+                            <i class="fa fa-facebook" aria-hideen="true"></i>
+                            {{ Partager }}
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn btn-md share_tw" data-url="{{events.url}}{% url 'events:event_detail' events.id %}"  style="background-color:#55ACEE">
+                            <i class="fa fa-twitter" aria-hideen="true"></i>
+                            {{ Partager }}
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn btn-md share_lkdin" data-url="{{events.url}}{% url 'events:event_detail' events.id %}" style="background-color:#0177B5">
+                            <i class="fa fa-linkedin" aria-hideen="true"></i>
+                            {{ Partager }}
+                            </button>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
         </div>
 
 
