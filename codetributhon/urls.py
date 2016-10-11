@@ -28,6 +28,7 @@ urlpatterns = i18n_patterns(
     url(r'^projects/', include('projects.urls', namespace="projects")),
     url(r'^events/', include('events.urls', namespace="events")),
     url(r'^i18n/', include('django.conf.urls.i18n')),
+
 )
 
 if settings.DEBUG:
