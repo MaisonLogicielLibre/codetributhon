@@ -34,6 +34,3 @@ msgstr "Évènements"
 #: events/templates/events/list.html:101
 msgid "Aucun evenements"
 msgstr "Aucun evenements"
-
-#~ msgid "Localisation"
-#~ msgstr "Localisation"
