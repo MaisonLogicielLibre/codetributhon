@@ -15,22 +15,6 @@
 
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-principal">
         <div class="container-fluid">
-            <div class= "translate-section" >
-                <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-                    <input name="next" type="hidden" value="{{ redirect_to }}" />
-                    <select name="language" class="select_lang">
-                        {% get_current_language as LANGUAGE_CODE %}
-                        {% get_available_languages as LANGUAGES %}
-                        {% get_language_info_list for LANGUAGES as languages %}
-                        {% for language in languages %}
-                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
-                                {{ language.name_local }} ({{ language.code }})
-                            </option>
-                        {% endfor %}
-                    </select>
-                    <input type="submit" value="Go" />
-                </form>
-            </div>
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="row navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
