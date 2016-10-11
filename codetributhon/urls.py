@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 
 
-urlpatterns = [
+urlpatterns = i18n_patterns(
     url(r'^admin/', admin.site.urls),
     url(r'^', include('pages.urls', namespace="pages")),
     url(r'^members/', include('members.urls', namespace="members")),
@@ -29,7 +29,7 @@ urlpatterns = [
     url(r'^events/', include('events.urls', namespace="events")),
     url(r'^i18n/', include('django.conf.urls.i18n')),
   
-]
+)
 
 if settings.DEBUG:
     # static files (images, css, javascript, etc.)
