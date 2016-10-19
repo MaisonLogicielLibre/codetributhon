@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-19 14:07+0000\n"
+"POT-Creation-Date: 2016-10-19 14:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,12 +26,12 @@ msgstr "Localisation"
 msgid "Description"
 msgstr "Description"
 
-#: events/templates/events/detail.html:133
+#: events/templates/events/detail.html:136
 #: events/templates/events/list.html:67
 msgid "Inscris-toi"
 msgstr "Inscris-toi"
 
-#: events/templates/events/detail.html:136
+#: events/templates/events/detail.html:139
 msgid "Partager"
 msgstr "Partager"
 

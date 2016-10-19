@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-11 19:44+0000\n"
+"POT-Creation-Date: 2016-10-19 14:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,29 +18,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: codetributhon/settings.py:138
+#: codetributhon/settings.py:136
 msgid "Français"
 msgstr "Français"
 
-#: codetributhon/settings.py:139
+#: codetributhon/settings.py:137
 msgid "Anglais"
 msgstr "Anglais"
 
 #: codetributhon/templates/footer.html:15
-#: codetributhon/templates/header.html:34
-#: codetributhon/templates/header.html:40
+#: codetributhon/templates/header.html:50
+#: codetributhon/templates/header.html:56
 msgid "Accueil"
 msgstr "Accueil"
 
 #: codetributhon/templates/footer.html:16
-#: codetributhon/templates/header.html:35
-#: codetributhon/templates/header.html:41
+#: codetributhon/templates/header.html:51
+#: codetributhon/templates/header.html:57
 msgid "Évènements"
 msgstr "Évènements"
 
 #: codetributhon/templates/footer.html:17
-#: codetributhon/templates/header.html:36
-#: codetributhon/templates/header.html:42
+#: codetributhon/templates/header.html:52
+#: codetributhon/templates/header.html:58
 msgid "Projets"
 msgstr "Projets"
 
@@ -49,13 +49,13 @@ msgid "Contributions"
 msgstr "Contributions"
 
 #: codetributhon/templates/footer.html:19
-#: codetributhon/templates/header.html:37
-#: codetributhon/templates/header.html:43
+#: codetributhon/templates/header.html:53
+#: codetributhon/templates/header.html:59
 msgid "Récompenses"
 msgstr "Récompenses"
 
 #: codetributhon/templates/footer.html:20
-#: codetributhon/templates/header.html:44
+#: codetributhon/templates/header.html:60
 msgid "Règlement"
 msgstr "Règlement"
 

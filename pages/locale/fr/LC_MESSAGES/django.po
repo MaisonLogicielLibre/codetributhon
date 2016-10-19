@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-11 14:39+0000\n"
+"POT-Creation-Date: 2016-10-19 14:46+0000\n"
 "PO-Revision-Date: 2016-09-15 12:00-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -97,11 +97,11 @@ msgstr "Envoyez votre contribution"
 msgid "C'est quoi le codetributhon?"
 msgstr "C'est quoi le codetributhon?"
 
-#: pages/templates/pages/home.html:150
+#: pages/templates/pages/home.html:149
 msgid "Le marathon"
 msgstr "Le marathon!"
 
-#: pages/templates/pages/home.html:152
+#: pages/templates/pages/home.html:151
 msgid ""
 "Un marathon de contributions étudiantes. Objectif 100 contributions dans 4 "
 "projets en logiciel libre."
@@ -109,11 +109,11 @@ msgstr ""
 "Un marathon de contributions étudiantes. Objectif 100 contributions dans 4 "
 "projets en logiciel libre"
 
-#: pages/templates/pages/home.html:161
+#: pages/templates/pages/home.html:160
 msgid "Des activités"
 msgstr "Des activités"
 
-#: pages/templates/pages/home.html:163
+#: pages/templates/pages/home.html:162
 msgid ""
 "Une foule d’activités: ateliers, conférences, 5à7, projection vidéo et bien "
 "plus!"
@@ -121,11 +121,11 @@ msgstr ""
 "Une foule d’activités: ateliers, conférences, 5à7, projection vidéo et bien "
 "plus!"
 
-#: pages/templates/pages/home.html:172
+#: pages/templates/pages/home.html:171
 msgid "La communauté"
 msgstr "La communauté"
 
-#: pages/templates/pages/home.html:174
+#: pages/templates/pages/home.html:173
 msgid ""
 "Débutants comme experts sont les bienvenus pour participer, s’entraider, "
 "contribuer et faire grandir la communauté du libre!"
@@ -133,15 +133,15 @@ msgstr ""
 "Débutants comme experts sont les bienvenus pour participer, s’entraider, "
 "contribuer et faire grandir la communauté du libre!"
 
-#: pages/templates/pages/home.html:187
+#: pages/templates/pages/home.html:186
 msgid "Nos partenaires"
 msgstr "Nos partenaires"
 
-#: pages/templates/pages/home.html:231
+#: pages/templates/pages/home.html:230
 msgid "Le codetributhon un évènement propulsé par"
 msgstr "Le codetributhon un évènement propulsé par"
 
-#: pages/templates/pages/home.html:238
+#: pages/templates/pages/home.html:237
 msgid ""
 "Activité dans le cadre de la semaine québécoise de l'informatique libre "
 "(SQIL) 2016"

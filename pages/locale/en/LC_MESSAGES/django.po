@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-11 14:39+0000\n"
+"POT-Creation-Date: 2016-10-19 14:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,11 +94,11 @@ msgstr "Send your contribution"
 msgid "C'est quoi le codetributhon?"
 msgstr "What is codetributhon?"
 
-#: pages/templates/pages/home.html:150
+#: pages/templates/pages/home.html:149
 msgid "Le marathon"
 msgstr "The marathon"
 
-#: pages/templates/pages/home.html:152
+#: pages/templates/pages/home.html:151
 msgid ""
 "Un marathon de contributions étudiantes. Objectif 100 contributions dans 4 "
 "projets en logiciel libre."
@@ -106,22 +106,22 @@ msgstr ""
 "A marathon of student's contributions. An objectif of 100 contibutions in 4 "
 "free software projects."
 
-#: pages/templates/pages/home.html:161
+#: pages/templates/pages/home.html:160
 msgid "Des activités"
 msgstr "Activities"
 
-#: pages/templates/pages/home.html:163
+#: pages/templates/pages/home.html:162
 msgid ""
 "Une foule d’activités: ateliers, conférences, 5à7, projection vidéo et bien "
 "plus!"
 msgstr ""
 "A lot of activities: workshops, conferences, 5to7, video and many mores!"
 
-#: pages/templates/pages/home.html:172
+#: pages/templates/pages/home.html:171
 msgid "La communauté"
 msgstr "The community"
 
-#: pages/templates/pages/home.html:174
+#: pages/templates/pages/home.html:173
 msgid ""
 "Débutants comme experts sont les bienvenus pour participer, s’entraider, "
 "contribuer et faire grandir la communauté du libre!"
@@ -129,15 +129,15 @@ msgstr ""
 "Beginner and experts are welcome to participate, help each other, contribut "
 "and grouh the free software community!."
 
-#: pages/templates/pages/home.html:187
+#: pages/templates/pages/home.html:186
 msgid "Nos partenaires"
 msgstr "Ours partners"
 
-#: pages/templates/pages/home.html:231
+#: pages/templates/pages/home.html:230
 msgid "Le codetributhon un évènement propulsé par"
 msgstr "The codetributhon is an event made by"
 
-#: pages/templates/pages/home.html:238
+#: pages/templates/pages/home.html:237
 msgid ""
 "Activité dans le cadre de la semaine québécoise de l'informatique libre "
 "(SQIL) 2016"
