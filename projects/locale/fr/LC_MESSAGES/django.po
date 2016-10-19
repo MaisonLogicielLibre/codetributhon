@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-11 14:39+0000\n"
+"POT-Creation-Date: 2016-10-19 15:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -112,10 +112,10 @@ msgstr "Liste des projets"
 msgid "Envoyez votre contribution"
 msgstr "Envoyez votre contribution"
 
-#: projects/templates/projects/list.html:62
+#: projects/templates/projects/list.html:66
 msgid "Aucun de vos projets ne correspond à ce statut."
 msgstr "Aucun de vos projets ne correspond à ce statut."
 
-#: projects/templates/projects/list.html:67
+#: projects/templates/projects/list.html:71
 msgid "Vous n'avez aucun projet pour le moment."
 msgstr "Vous n'avez aucun projet pour le moment."

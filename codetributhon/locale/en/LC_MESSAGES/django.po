@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-19 14:46+0000\n"
+"POT-Creation-Date: 2016-10-19 15:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: codetributhon/settings.py:136
+#: codetributhon/settings.py:137
 msgid "Français"
 msgstr "French"
 
-#: codetributhon/settings.py:137
+#: codetributhon/settings.py:138
 msgid "Anglais"
 msgstr "English"
 
@@ -50,11 +50,11 @@ msgstr "Contributions"
 #: codetributhon/templates/footer.html:19
 #: codetributhon/templates/header.html:53
 #: codetributhon/templates/header.html:59
-msgid "Récompenses"
-msgstr "Rewards"
+msgid "FAQ"
+msgstr "FAQ"
 
 #: codetributhon/templates/footer.html:20
-#: codetributhon/templates/header.html:60
+#: codetributhon/templates/header.html:61
 msgid "Règlement"
 msgstr "Rules"
 
@@ -94,3 +94,7 @@ msgstr "Phone"
 #: codetributhon/templates/footer.html:103
 msgid "Adresse"
 msgstr "Address"
+
+#: codetributhon/templates/header.html:60
+msgid "Récompenses"
+msgstr "Rewards"
