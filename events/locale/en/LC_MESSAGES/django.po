@@ -17,7 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: events/templates/events/detail.html:139
+#: events/templates/events/detail.html:61
+msgid "Localisation"
+msgstr "Location"
+
+#: events/templates/events/detail.html:106
+msgid "Description"
+msgstr "Description"
+
+#: events/templates/events/detail.html:133
 #: events/templates/events/list.html:67
 msgid "Inscris-toi"
 msgstr "Register yourself"

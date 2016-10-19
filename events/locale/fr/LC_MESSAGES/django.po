@@ -18,12 +18,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: events/templates/events/detail.html:139
+#: events/templates/events/detail.html:61
+msgid "Localisation"
+msgstr "Localisation"
+
+#: events/templates/events/detail.html:106
+msgid "Description"
+msgstr "Description"
+
+#: events/templates/events/detail.html:133
 #: events/templates/events/list.html:67
 msgid "Inscris-toi"
 msgstr "Inscris-toi"
 
-#: events/templates/events/detail.html:142
+#: events/templates/events/detail.html:136
 msgid "Partager"
 msgstr "Partager"
 

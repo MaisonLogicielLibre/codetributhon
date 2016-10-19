@@ -124,11 +124,9 @@ LOCALE_PATHS = (
     'members/locale',
 )
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
-
-LANGUAGE_CODE = 'fr-ca'
+LANGUAGE_CODE = 'fr-CA'
 
 # Do not import the real utils here! We don't want an infinite loop
 gettext = lambda x: x
