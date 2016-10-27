@@ -99,6 +99,3 @@ ENV/
 .ropeproject
 Supprimerait newenv/
 
-# API Key
-codetributhon/static/API_KEYS.xml
-
