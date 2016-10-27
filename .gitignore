@@ -100,5 +100,5 @@ ENV/
 Supprimerait newenv/
 
 # API Key
-codetributhon/API_KEYS.xml
+codetributhon/static/API_KEYS.xml
 
