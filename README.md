@@ -11,10 +11,11 @@ universitaire québécois, dans divers langages informatiques, par la
 participation à des projets libres. Notre mission: Initier, Développer, 
 Partager
 
-## installation 
+## Installation
 - Récupérer le dépot distant sur votre dépot local.
-- Supprimer s'ils existent encore les repertoires de nom 'migrations' 
-des répertoires 'events', 'faq', 'projects'
-- Faire votre propre migration avec les commandes
-`python manage.py  makemigrations events projects faq` et 
-`python migrate`
+- Faire votre migration avec les commandes `python3 migrate`
+- Pour la activer les proprietes de translate faite la commande `python3 manage.py compilemessage`
+
+### Module evenement
+- creer votre cle d'API google map (Pour le faire referez vous a la documentation officielle)
+- Allez dans le dossier `static` modifier le fichier XML `API_KEYS.xml` pour mettre votre cle
