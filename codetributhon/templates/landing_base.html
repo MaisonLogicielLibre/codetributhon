@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load staticfiles %}
 {% load bootstrap3 %}
+{% load i18n %}
 <html>
     <head>
         <meta charset="UTF-8">
@@ -38,6 +39,7 @@
     </head>
 
     <body class="centered-logo">
+
         {% include 'header.html' %}
 
         <div class="body">
@@ -70,15 +72,34 @@
 
 
             {% block content %}{% endblock %}
-        </div>
 
+            <div class= "translate-section" >
+                <form action="{% url 'set_language' %}" method="post" class=" form-horizontal" id="form-lang">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}" />
+                    <select name="language" class="selectpicker form-control">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}" class="lang"
+                                    {% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                                {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                </form>
+            </div>
+        </div>
 
         {% include 'footer.html' %}
 
         <script src="{% static 'js/libs/jquery-2.2.2.min.js' %}" type="application/javascript"></script>
+        <script src="{% static 'js/codetributhon.js' %}" type="application/javascript"></script>
 
         {% bootstrap_javascript %}
         <!-- WARNING :  Do not move this line before a manual import of script! -->
         {% block extrajs %}{% endblock %}
+
     </body>
 </html>
