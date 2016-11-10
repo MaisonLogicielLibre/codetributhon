@@ -4,7 +4,7 @@ from django.db.models import Q
 from faq.models import Category, Faq
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.urlresolvers import reverse_lazy
-
+import markdown
 
 class FaqList(generic.ListView):
     # List all FAQ
@@ -15,7 +15,9 @@ class FaqList(generic.ListView):
         # list_faq = Faq.objects.filter(enabled=True).order_by('-create_date')
         categories = Category.objects.order_by('-create_date')
 
+        md = markdown.Markdown()
         for cat in categories:
             cat.list_faq = Faq.objects.filter(Q(enabled=True) & Q(category = cat.id) ).order_by('-create_date')
-
+            for faq in cat.list_faq:
+                faq.response = md.convert(faq.response)
         return categories
