@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 {% load staticfiles %}
 {% load bootstrap3 %}
+{% load i18n %}
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -31,7 +33,6 @@
 
         <link href="{% static 'font-awesome-4.5.0/css/font-awesome.css' %}" rel="stylesheet">
         <link href="{% static 'css/style.css' %}" rel="stylesheet">
-
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
 
         {% block extrahead %}{% endblock %}
@@ -41,7 +42,7 @@
         {% include 'header.html' %}
 
         <div class="body">
-            <div class="container">
+            <div class="container">0
                 <div class="row">
                     <div class="col-sm-10">
                         {% if messages %}
@@ -72,10 +73,36 @@
             {% block content %}{% endblock %}
         </div>
 
+        <div class="translate-section">
+            <form action="{% url 'set_language' %}" method="post" class="form-horizontal" id="form-lang">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}" />
+                <select name="language" class="selectpicker form-control">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option value="{{ language.code }}"
+                                {% if language.code == LANGUAGE_CODE %}
+                                    selected="selected"
+                                {% endif %}>
+                            {{ language.name_local }} ({{ language.code }})
+                        </option>
+                    {% endfor %}
+                </select>
+            </form>
+        </div>
 
         {% include 'footer.html' %}
 
         <script src="{% static 'js/libs/jquery-2.2.2.min.js' %}" type="application/javascript"></script>
+        <script>
+            $(function(){
+                $("#form-lang").on("change", function() {
+                    $(this).submit();
+                });
+            });
+        </script>
 
         {% bootstrap_javascript %}
         <!-- WARNING :  Do not move this line before a manual import of script! -->
