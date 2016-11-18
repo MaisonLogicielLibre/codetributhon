@@ -10,84 +10,153 @@
 
 {% block extrahead %}
     <style>
-        /*.body{ background: url("/media/{{ MEDIA_URL }}{{ events.logo }}") no-repeat center top; background-size: 100% 100% }
-        .body-general{ background-color: rgba(255, 255, 255, 0.95); padding: 0 30px; }*/
-    .btn-url{
-        color: black;}
-    .vertical_section{
-	margin-top:50px;
-	float:left;
-	width:50%;}
+        .btn{
+            color:white;
+        }
+        body .row:nth-child(2){
+            margin-bottom: 30px;
+        }
+        #map { height: 250px; }
+        #localistion{ margin-bottom: 30px;}
     </style>
 {% endblock %}
+
 {% block extrajs %}
     <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.7";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
+    <script type="text/javascript" src="{% static 'js/events.js' %}"></script>
+
+    <script  type="text/javascript">
+        (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.7";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
 {% endblock %}
 
 {% block content %}
     <div class="container">
         <div class="body-general">
-
-              <div class="row">
-		<div class="vertical_section">
-                  <img src="/media/{{ MEDIA_URL }}{{ events.presenter_picture }}" alt="{{events.title}}" class="img-responsive prj-img" width="70%">
-                  <h1>
-                    {{events.title}}<br>
-                    <small>{{ events.subTitle }}</small>
-                  </h1>
+            <div class="page-header">
+                <div class="vertical_section">
+                    <img src="/media/{{ MEDIA_URL }}{{ events.presenter_picture }}" alt="{{events.title}}" class="img-responsive prj-img" width="50%">
+                    <h1>
+                        {{events.title}}<br>
+                        <small>{{ events.subTitle }}</small>
+                    </h1>
                   <h5>{{ events.dateEvent|date:"d M Y" }}  a {{ events.time }}</h5>
+                </div>
 
-		</div>
-		<div class="vertical_section">
-		  <center>
-		    <img src="/media/{{ MEDIA_URL }}{{ events.first_right_picture }}"  class="img-responsive prj-img" width=200px>
-		    </br>
-		    <img src="/media/{{ MEDIA_URL }}{{ events.second_right_picture }}"  class="img-responsive prj-img" width=200px>
-		    </br>
-                    <h4> {{events.thanking_text}} </h4></center>
-		</div>
-	      </div>
+	        </div>
 
 
-              <div class="row">
-                  <p>
-                      <b>Location:</b> {{ events.location }}
-                  </p>
+            <div class="row">
+                <div class="col-md-8">
+
+                    <div class="row" id="localistion">
+                        <h2>{% trans "Localisation" %}</h2>
+                        <div id="map"></div>
+                        <script type="text/javascript">
+
+
+                            function initMap() {
+                                var myLatLng = {lat: -25.363, lng: 131.044};
+                                var map = new google.maps.Map(document.getElementById('map'), {
+                                    center: myLatLng,
+                                    zoom: 15
+                                });
+
+                                var geocoder = new google.maps.Geocoder();
+
+                                geocodeAddress(geocoder, map);
+                            }
+                            //geolocaliser l'adresse
+                            function geocodeAddress(geocoder, resultsMap) {
+                                var address = document.getElementById('address').innerText;
+
+                                geocoder.geocode({'address': address}, function(results, status) {
+                                    if (status === google.maps.GeocoderStatus.OK) {
+                                        resultsMap.setCenter(results[0].geometry.location);
+                                        var marker = new google.maps.Marker({
+                                          map: resultsMap,
+                                          position: results[0].geometry.location,
+                                          title: address
+                                        });
+                                    } else {
+                                        alert('Geocode was not successful for the following reason: ' + status);
+                                    }
+                                });
+                            }
+
+                        </script>
+                        <script async defer src='https://maps.googleapis.com/maps/api/js?key={{ key_google_map }}&callback=initMap' > </script>
+                        <span id="address" class="hide">{{ events.location }}</span>
+                    </div>
+
+                    <div class="row" id="description">
+                        <h2>{% trans "Description" %}</h2>
+                        <div>{% autoescape off %}{{content_html}}{% endautoescape %}</div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="/media/{{ MEDIA_URL }}{{ events.first_right_picture }}"  class="img-responsive prj-img" >
+                            </div>
+                            <div class="col-md-6">
+                                <img src="/media/{{ MEDIA_URL }}{{ events.second_right_picture }}"  class="img-responsive prj-img">
+                            </div>
+                        </div>
+
+                        <div class="text-justify"> {{events.thanking_text}} </div>
+                      </div>
+                    </div>
+            </div>
+
+            <div class="row">
                   {% autoescape off %}
                       {{content_html}}
                   {% endautoescape %}
                   <div>
-
                     <ul class="list-inline">
                         <li>
-                            <a href="{{ events.url }}" class="btn btn-warning btn-sm btn-url">
-                                <span class="fa fa-globe"></span> Inscris-toi
+                            <a href="{{ events.url }}" class="btn btn-md btn-url" style="background-color:#EFAD4F">
+                                <span class="fa fa-globe"></span>
+                                {% trans "Inscris-toi" %}
                             </a>
+		                </li>
+                        {% trans "Partager" as Partager %}
+		                <li>
+                            <button class="btn btn-md share_fb" data-url="{{events.url}}{% url 'events:event_detail' events.id %}" style="background-color:#4C67A1">
+                            <i class="fa fa-facebook" aria-hideen="true"></i>
+                            {{ Partager }}
+                            </button>
                         </li>
                         <li>
-                            <div class="fb-share-button" data-href="{% url 'events:event_detail' events.id %}" data-layout="button_count" data-size="large" data-mobile-iframe="true">
-                                <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={% url 'events:event_detail' events.id %}&amp;src=sdkpreparse">Partager</a>
-                            </div>
+                            <button class="btn btn-md share_tw" data-url="{{events.url}}{% url 'events:event_detail' events.id %}"  style="background-color:#55ACEE">
+                            <i class="fa fa-twitter" aria-hideen="true"></i>
+                            {{ Partager }}
+                            </button>
                         </li>
                         <li>
-                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="{% url 'events:event_detail' events.id %}" data-via="codetributhon" data-size="large">
-                                Tweet
-                            </a>
-                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                            <button class="btn btn-md share_lkdin" data-url="{{events.url}}{% url 'events:event_detail' events.id %}" style="background-color:#0177B5">
+                            <i class="fa fa-linkedin" aria-hideen="true"></i>
+                            {{ Partager }}
+                            </button>
                         </li>
                     </ul>
                   </div>
-	      </div>
-      
-
+                </div>
         </div>
+
+
     </div>
 
 {% endblock %}

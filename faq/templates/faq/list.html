@@ -51,7 +51,9 @@
                                 <div id="collapse{{ faq.id }}" class="panel-collapse collapse in" role="tabpanel"
                                      aria-labelledby="heading{{ faq.id }}">
                                     <div class="panel-body">
-                                         <p>{{faq.response}} </p>
+                                        {% autoescape off %}
+                                            <p>{{faq.response}} </p>
+                                        {% endautoescape %}
                                     </div>
                                 </div>
 
@@ -60,7 +62,7 @@
                         {% endfor %}
                     {% else %}
                         <div class="alert alert-warning">
-                            Aucunes questions
+                            {% trans "Aucunes questions" %}
                         </div>
                     {% endif %}
                 </div>

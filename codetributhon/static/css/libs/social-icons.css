@@ -50,7 +50,7 @@
 	border: none;
 }
 
-.behance {background: url(../../img/icons/social/behance.png) no-repeat;}
+/*.behance {background: url(../../img/icons/social/behance.png) no-repeat;}
 .blogger {background: url(../../img/icons/social/blogger.png) no-repeat;}
 .deviantart{background: url(../../img/icons/social/deviantart.png) no-repeat;}
 .dribbble {background: url(../../img/icons/social/dribbble.png) no-repeat;}
@@ -74,7 +74,8 @@
 .wordpress {background: url(../../img/icons/social/wordpress.png) no-repeat;}
 .xing {background: url(../../img/icons/social/xing.png) no-repeat;}
 .yahoo {background: url(../../img/icons/social/yahoo.png) no-repeat;}
-.youtube {background: url(../../img/icons/social/youtube.png) no-repeat;}
+.youtube {background: url(../../img/icons/social/youtube.png) no-repeat;}*/   
+
 
 /* Social Icons - big
 =================================================================== */
@@ -484,8 +485,8 @@
 
 .social-info{
 	position: absolute;
-	width: 70px;
-	height: 70px;	
+	width: 72px;
+	height: 72px;	
 	-webkit-border-radius: 50em;
 	-moz-border-radius: 50em;
 	border-radius: 50em;
@@ -524,7 +525,6 @@
 	-o-transform: rotate3d(0,1,0,180deg);
 	-ms-transform: rotate3d(0,1,0,180deg);
 	transform: rotate3d(0,1,0,180deg);
-	margin-left: -2px;
 }
 
 .social-item:hover .social-info-wrap {
