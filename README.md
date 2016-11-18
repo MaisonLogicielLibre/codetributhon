@@ -17,6 +17,3 @@ Partager
 - Supprimer s'ils existent encore les repertoires de nom 'migrations' 
 des répertoires 'events', 'faq', 'projects'
 - Faire votre propre migration avec les commandes
-`python manage.py  makemigrations events projects faq` et 
-`python migrate`
->>>>>>> 10de5f3f6ee85f41abeca9262ad0c5ed6a61a76a
