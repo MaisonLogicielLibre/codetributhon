@@ -14,7 +14,13 @@
 {% endblock %}
 {% block extrajs %}
     <script type="text/javascript" src="{% static 'js/libs/jquery.backstretch.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/contribution.js' %}"></script>
+    <!--script type="text/javascript" src="{% static 'js/contribution.js' %}"></script-->
+    <script>
+        $('.body').backstretch([
+            "../../../../static/img/bg/2.jpg"
+        ]);
+    </script>
+
 {% endblock %}
 
 {% block content %}
