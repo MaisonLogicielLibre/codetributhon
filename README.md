@@ -14,8 +14,7 @@ Partager
 
 ## installation 
 - Récupérer le dépot distant sur votre dépot local.
-- Supprimer s'ils existent encore les repertoires de nom 'migrations' 
-des répertoires 'events', 'faq', 'projects'
-- Faire votre propre migration avec les commandes
-`python manage.py  makemigrations events projects faq` et 
-`python migrate`
+-  Faire votre migration pour mapper votre BD 
+    `python migrate`
+- Creer une cle d'API pour Google Map et enregistrer la dans le fichier
+ `codetributhon/static/API_KEYS.xml`
