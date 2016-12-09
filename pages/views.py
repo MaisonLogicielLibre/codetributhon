@@ -17,8 +17,9 @@ class Home(generic.TemplateView):
         context = super(Home, self).get_context_data(**kwargs)
         nb_contrib = Contribution.objects.filter( enabled=1).count()
         app = settings.CONSTANT
-        context['number_of_contribution'] = app['contribution']
-        context['percent_of_contribution'] = nb_contrib
+        context['objectif_of_contribution_binairy'] = "{0:b}".format(app['contribution'])
+        context['objectif_of_contribution_decimal'] = app['contribution']
+        context['nb_of_accepted_contribution'] = nb_contrib
         return context
 
 
