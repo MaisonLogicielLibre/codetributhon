@@ -22,7 +22,7 @@
     <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
 
     <script>
-        var percent = {{ percent_of_contribution }};
+        var percent = {{ nb_of_accepted_contribution }} *100 / {{objectif_of_contribution_decimal}};
         $(".textProgress").data("animated", false).textProgress(percent);
         $(".nb-contribution").html(percent);
 
@@ -55,8 +55,8 @@
                     <div class="box-text">
                         <h2>{% trans "Un marathon de contributions!" %}</h2>
                         <p>
-                            {% blocktrans %}Le but est d’atteindre <span class="numb-contrib">{{ number_of_contribution }}</span>
-				 contributions dans 4 projets de logiciel libre. {% endblocktrans %}
+                            {% blocktrans %}Le but est d’atteindre <span class="numb-contrib">{{objectif_of_contribution_binairy }}</span>
+                            <sub>2</sub> contributions dans 4 projets de logiciel libre. {% endblocktrans %}
                         </p>
                         <a href="{%  url 'projects:project_list' %}" class="btn btn-danger btn-lg">{% trans "Projets" %}</a>
                     </div>
